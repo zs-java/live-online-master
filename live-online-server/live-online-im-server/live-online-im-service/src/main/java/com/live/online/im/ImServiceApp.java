@@ -2,7 +2,7 @@ package com.live.online.im;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @date 2020-08-10 1:13 上午
  */
 @SpringBootApplication
-@EnableEurekaClient
+@EnableDiscoveryClient
 @ComponentScan("com.live.online")
 public class ImServiceApp {
 

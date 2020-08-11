@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: im-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${app.nacos.ip}:${app.nacos.port}
+        group: ${app.nacos.group-prefix}-discovery
+        namespace: ${app.nacos.namespace}
+      config:
+        group: ${app.nacos.group-prefix}-config
+        file-extension: yaml
+        server-addr: ${app.nacos.ip}:${app.nacos.port}
+        namespace: ${app.nacos.namespace}
+  profiles:
+    active: dev
+
+app:
+  nacos:
+    ip: 127.0.0.1
+    port: 8848
+    group-prefix: live-online
+    namespace: a5644a2e-aaba-4c0e-b197-0707d387807f

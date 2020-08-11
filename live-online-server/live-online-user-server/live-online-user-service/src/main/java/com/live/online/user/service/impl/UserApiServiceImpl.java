@@ -24,6 +24,7 @@ public class UserApiServiceImpl implements IUserApiService {
      * @param id id
      * @return user
      */
+    @Override
     @PostMapping("/getUserById")
     public UserDto getUserById(@RequestParam("id") Long id) {
         UserDto userDto = new UserDto();

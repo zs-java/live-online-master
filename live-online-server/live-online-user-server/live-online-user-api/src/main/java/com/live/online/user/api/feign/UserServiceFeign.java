@@ -1,6 +1,6 @@
 package com.live.online.user.api.feign;
 
-import com.live.online.common.constants.AppName;
+import com.live.online.common.base.constants.AppName;
 import com.live.online.user.api.service.IUserApiService;
 import org.springframework.cloud.openfeign.FeignClient;
 

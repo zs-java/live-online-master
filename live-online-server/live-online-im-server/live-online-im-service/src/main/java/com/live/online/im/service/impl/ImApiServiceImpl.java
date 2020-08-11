@@ -1,6 +1,7 @@
 package com.live.online.im.service.impl;
 
 import com.live.online.im.api.service.IImApiService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,9 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ImApiServiceImpl implements IImApiService {
 
+    @Value("${im.message:}")
+    private String message;
+
     @GetMapping("/test")
     public String test() {
-        return "im send success";
+        return "Config:" + message;
     }
 
 }

@@ -1,6 +1,6 @@
 package com.live.online.im.api.feign;
 
-import com.live.online.common.constants.AppName;
+import com.live.online.common.base.constants.AppName;
 import com.live.online.im.api.service.IImApiService;
 import org.springframework.cloud.openfeign.FeignClient;
 

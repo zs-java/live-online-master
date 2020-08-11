@@ -1,6 +1,0 @@
-app:
-  host: 127.0.0.1
-  port: 8011
-  eureka:
-    host: 127.0.0.1
-    port: 8761
