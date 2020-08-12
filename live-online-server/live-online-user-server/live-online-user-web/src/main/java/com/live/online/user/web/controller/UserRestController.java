@@ -1,7 +1,10 @@
 package com.live.online.user.web.controller;
 
+import com.live.online.common.base.exception.ApiResultException;
+import com.live.online.common.base.result.entity.ApiResult;
+import com.live.online.common.base.result.entity.WebResult;
 import com.live.online.user.api.feign.UserServiceFeign;
-import com.live.online.user.api.model.UserDto;
+import com.live.online.user.api.model.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,8 +21,9 @@ public class UserRestController {
     private UserServiceFeign userServiceFeign;
 
     @GetMapping("/getUserById")
-    public UserDto getUserById(@RequestParam("id") Long id) {
-        return userServiceFeign.getUserById(id);
+    public WebResult<UserDTO> getUserById(@RequestParam("id") Long id) throws ApiResultException {
+        ApiResult<UserDTO> apiResult = userServiceFeign.getUserById(id);
+        return WebResult.success(apiResult.getDataRequireSuccess());
     }
 
 }

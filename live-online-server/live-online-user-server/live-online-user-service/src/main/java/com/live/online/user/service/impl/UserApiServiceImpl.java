@@ -1,7 +1,9 @@
 package com.live.online.user.service.impl;
 
+import com.live.online.common.base.exception.ApiResultException;
+import com.live.online.common.base.result.entity.ApiResult;
 import com.live.online.im.api.feign.ImServiceFeign;
-import com.live.online.user.api.model.UserDto;
+import com.live.online.user.api.model.UserDTO;
 import com.live.online.user.api.service.IUserApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,11 +28,11 @@ public class UserApiServiceImpl implements IUserApiService {
      */
     @Override
     @PostMapping("/getUserById")
-    public UserDto getUserById(@RequestParam("id") Long id) {
-        UserDto userDto = new UserDto();
-        userDto.setId(id);
-        userDto.setName(imServiceFeign.test());
-        return userDto;
+    public ApiResult<UserDTO> getUserById(@RequestParam("id") Long id) throws ApiResultException {
+        UserDTO userDTO = new UserDTO();
+        userDTO.setId(id);
+        userDTO.setName(imServiceFeign.test().getDataRequireSuccess());
+        return ApiResult.success(userDTO);
     }
 
 }

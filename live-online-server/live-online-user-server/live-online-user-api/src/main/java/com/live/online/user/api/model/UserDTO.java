@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @date 2020-08-10 12:13 上午
  */
 @Data
-public class UserDto implements Serializable {
+public class UserDTO implements Serializable {
 
     private Long id;
     private String name;

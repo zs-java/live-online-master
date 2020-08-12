@@ -1,5 +1,6 @@
 package com.live.online.im.api.service;
 
+import com.live.online.common.base.result.entity.ApiResult;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
@@ -9,6 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface IImApiService {
 
     @GetMapping("/test")
-    String test();
+    ApiResult<String> test();
 
 }
