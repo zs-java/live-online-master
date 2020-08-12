@@ -1,8 +1,10 @@
 # live-online-master
 
 ```
-ROOT Project live-online-mast
+ROOT Project live-online-master
 +--- live-online-common
+    \+--- live-online-common-base
+    \+--- live-online-common-doc
 +--- live-online-eureka-server
 +--- live-online-gateway
 +--- live-online-job
