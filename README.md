@@ -3,7 +3,7 @@
 ```
 ROOT Project live-online-master
 +--- live-online-common
-    \+--- live-online-common-base
+    \+--- live-online-common-core
     \+--- live-online-common-doc
 +--- live-online-eureka-server
 +--- live-online-gateway

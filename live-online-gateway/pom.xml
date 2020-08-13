@@ -44,10 +44,10 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
-        <!-- Live Online Common Base -->
+        <!-- Live Online Common Core -->
         <dependency>
             <groupId>com.live.online</groupId>
-            <artifactId>live-online-common-base</artifactId>
+            <artifactId>live-online-common-core</artifactId>
         </dependency>
 
     </dependencies>

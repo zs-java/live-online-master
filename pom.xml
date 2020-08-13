@@ -71,7 +71,7 @@
             </dependency>
             <dependency>
                 <groupId>com.live.online</groupId>
-                <artifactId>live-online-common-base</artifactId>
+                <artifactId>live-online-common-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

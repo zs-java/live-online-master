@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
     
     <modules>
-        <module>live-online-common-base</module>
+        <module>live-online-common-core</module>
     </modules>
 
 </project>

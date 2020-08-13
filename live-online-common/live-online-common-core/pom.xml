@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>live-online-common-base</artifactId>
+    <artifactId>live-online-common-core</artifactId>
 
     <dependencies>
         <dependency>
