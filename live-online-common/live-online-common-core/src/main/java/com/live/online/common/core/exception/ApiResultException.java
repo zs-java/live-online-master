@@ -1,4 +1,4 @@
-package com.live.online.common.base.exception;
+package com.live.online.common.core.exception;
 
 import org.apache.commons.lang3.StringUtils;
 

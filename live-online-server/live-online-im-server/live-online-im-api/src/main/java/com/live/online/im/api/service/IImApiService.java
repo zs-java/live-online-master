@@ -1,6 +1,6 @@
 package com.live.online.im.api.service;
 
-import com.live.online.common.base.result.entity.ApiResult;
+import com.live.online.common.core.result.entity.ApiResult;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**

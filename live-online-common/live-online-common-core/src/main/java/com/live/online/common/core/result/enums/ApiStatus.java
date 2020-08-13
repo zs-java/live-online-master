@@ -1,4 +1,4 @@
-package com.live.online.common.base.result.enums;
+package com.live.online.common.core.result.enums;
 
 /**
  * Api Service 返回状态

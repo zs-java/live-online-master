@@ -1,4 +1,4 @@
-package com.live.online.common.base.constants;
+package com.live.online.common.core.constants;
 
 /**
  * Spring Application Name

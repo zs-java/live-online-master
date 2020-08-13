@@ -1,7 +1,7 @@
 package com.live.online.user.service.impl;
 
-import com.live.online.common.base.exception.ApiResultException;
-import com.live.online.common.base.result.entity.ApiResult;
+import com.live.online.common.core.exception.ApiResultException;
+import com.live.online.common.core.result.entity.ApiResult;
 import com.live.online.im.api.feign.ImServiceFeign;
 import com.live.online.user.api.model.UserDTO;
 import com.live.online.user.api.service.IUserApiService;

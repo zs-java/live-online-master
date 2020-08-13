@@ -1,4 +1,4 @@
-package com.live.online.common.base.utils;
+package com.live.online.common.core.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JavaType;

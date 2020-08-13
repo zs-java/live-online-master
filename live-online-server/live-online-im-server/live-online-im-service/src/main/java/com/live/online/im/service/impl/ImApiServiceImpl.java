@@ -1,6 +1,6 @@
 package com.live.online.im.service.impl;
 
-import com.live.online.common.base.result.entity.ApiResult;
+import com.live.online.common.core.result.entity.ApiResult;
 import com.live.online.im.api.service.IImApiService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;

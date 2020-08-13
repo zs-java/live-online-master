@@ -1,8 +1,8 @@
-package com.live.online.common.base.result.entity;
+package com.live.online.common.core.result.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.live.online.common.base.exception.ApiResultException;
-import com.live.online.common.base.result.enums.ApiStatus;
+import com.live.online.common.core.exception.ApiResultException;
+import com.live.online.common.core.result.enums.ApiStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

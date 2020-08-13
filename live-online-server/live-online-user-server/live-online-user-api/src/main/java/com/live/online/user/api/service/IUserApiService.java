@@ -1,7 +1,7 @@
 package com.live.online.user.api.service;
 
-import com.live.online.common.base.exception.ApiResultException;
-import com.live.online.common.base.result.entity.ApiResult;
+import com.live.online.common.core.exception.ApiResultException;
+import com.live.online.common.core.result.entity.ApiResult;
 import com.live.online.user.api.model.UserDTO;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;

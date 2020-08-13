@@ -6,7 +6,7 @@ import com.alibaba.nacos.api.PropertyKeyConst;
 import com.alibaba.nacos.api.config.ConfigService;
 import com.alibaba.nacos.api.config.listener.Listener;
 import com.alibaba.nacos.api.exception.NacosException;
-import com.live.online.common.base.utils.JsonUtils;
+import com.live.online.common.core.utils.JsonUtils;
 import com.live.online.gateway.dynamic.service.DynamicRouteService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

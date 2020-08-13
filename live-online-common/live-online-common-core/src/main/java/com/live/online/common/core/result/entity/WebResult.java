@@ -1,7 +1,7 @@
-package com.live.online.common.base.result.entity;
+package com.live.online.common.core.result.entity;
 
-import com.live.online.common.base.result.enums.ApiStatus;
-import com.live.online.common.base.result.enums.HttpCode;
+import com.live.online.common.core.result.enums.ApiStatus;
+import com.live.online.common.core.result.enums.HttpCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

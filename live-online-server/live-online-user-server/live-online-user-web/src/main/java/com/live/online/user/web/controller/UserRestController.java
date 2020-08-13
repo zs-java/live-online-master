@@ -1,8 +1,8 @@
 package com.live.online.user.web.controller;
 
-import com.live.online.common.base.exception.ApiResultException;
-import com.live.online.common.base.result.entity.ApiResult;
-import com.live.online.common.base.result.entity.WebResult;
+import com.live.online.common.core.exception.ApiResultException;
+import com.live.online.common.core.result.entity.ApiResult;
+import com.live.online.common.core.result.entity.WebResult;
 import com.live.online.user.api.feign.UserServiceFeign;
 import com.live.online.user.api.model.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
