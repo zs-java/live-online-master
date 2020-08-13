@@ -14,6 +14,8 @@
     
     <modules>
         <module>live-online-common-core</module>
+        <module>live-online-common-redis</module>
+        <module>live-online-common-zookeeper</module>
     </modules>
 
 </project>
