@@ -2,8 +2,10 @@ package com.live.online.common.core.lock.core;
 
 import com.live.online.common.core.lock.exception.DistributedLockException;
 import com.sun.istack.internal.NotNull;
+import org.apache.commons.lang3.StringUtils;
 
 /**
+ * <pre/>
  * 分布式锁抽象类
  * 功能：
  *  1. 统一处理分布式锁异常
@@ -17,6 +19,9 @@ public abstract class AbstractDistributedLock implements DistributedLock {
     /** 默认最大重试次数*/
     private int maxRetryTime = 100;
 
+    /** 锁id*/
+    private String lockKey;
+
     public AbstractDistributedLock() {
     }
 
@@ -24,9 +29,19 @@ public abstract class AbstractDistributedLock implements DistributedLock {
         this.maxRetryTime = maxRetryTime;
     }
 
+    /**
+     * <pre/>
+     * 获取分布式锁
+     * 1. 将 {@link DistributedLock#lock(String)} 拆分为 {@link AbstractDistributedLock#tryLock(String)}、{@link AbstractDistributedLock#waitLock(String)}
+     * 2. 封装异常处理
+     * 3. 限制最大重试次数
+     * @param lockKey key
+     * @return {@link DistributedLock}
+     */
     @Override
-    public void lock(@NotNull String lockKey) {
+    public DistributedLock lock(@NotNull String lockKey) {
         try {
+            this.lockKey = lockKey;
             int retryTime = 0;
             while (!tryLock(lockKey)) {
                 if (++retryTime >= maxRetryTime) {
@@ -34,6 +49,7 @@ public abstract class AbstractDistributedLock implements DistributedLock {
                 }
                 waitLock(lockKey);
             }
+            return this;
         } catch (Exception e) {
             if (e instanceof DistributedLockException) {
                 throw e;
@@ -43,9 +59,19 @@ public abstract class AbstractDistributedLock implements DistributedLock {
         }
     }
 
+    /**
+     * <pre/>
+     * 释放分布式锁
+     * 封装异常处理
+     */
     @Override
-    public void unlock(@NotNull String lockKey) {
+    public void unlock() {
         try {
+
+            if (StringUtils.isBlank(this.lockKey)) {
+                throw new DistributedLockException("锁释放异常，LockKey IS NULL", this.getClass());
+            }
+
             release(lockKey);
         } catch (Exception e) {
             if (e instanceof DistributedLockException) {
@@ -54,6 +80,14 @@ public abstract class AbstractDistributedLock implements DistributedLock {
                 throw new DistributedLockException(e.getMessage(), this.getClass(), e);
             }
         }
+    }
+
+    /**
+     * {@link java.io.Closeable#close()}
+     */
+    @Override
+    public void close() {
+        unlock();
     }
 
     /**
@@ -66,6 +100,7 @@ public abstract class AbstractDistributedLock implements DistributedLock {
 
     /**
      * 等待获取锁
+     * @param lockKey key
      * @throws DistributedLockException 锁异常
      */
     public abstract void waitLock(@NotNull String lockKey) throws DistributedLockException;
@@ -76,4 +111,5 @@ public abstract class AbstractDistributedLock implements DistributedLock {
      * @throws DistributedLockException 锁异常
      */
     public abstract void release(@NotNull String lockKey) throws DistributedLockException;
+
 }

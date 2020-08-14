@@ -84,28 +84,14 @@
                 <groupId>com.101tec</groupId>
                 <artifactId>zkclient</artifactId>
                 <version>${tec.zkclient.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
-            <dependency>
-                <groupId>com.live.online</groupId>
-                <artifactId>live-online-common</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.live.online</groupId>
-                <artifactId>live-online-common-core</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.live.online</groupId>
-                <artifactId>live-online-user-api</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.live.online</groupId>
-                <artifactId>live-online-im-api</artifactId>
-                <version>${project.version}</version>
-            </dependency>
             <!-- Knife4j Swagger -->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
@@ -116,6 +102,42 @@
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-micro-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
+            </dependency>
+
+            <!-- Live Online Common -->
+            <dependency>
+                <groupId>com.live.online</groupId>
+                <artifactId>live-online-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- Live Online Common Core -->
+            <dependency>
+                <groupId>com.live.online</groupId>
+                <artifactId>live-online-common-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- Live Online Common Redis -->
+            <dependency>
+                <groupId>com.live.online</groupId>
+                <artifactId>live-online-common-redis</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <!-- Live Online Common Zookeeper -->
+            <dependency>
+                <groupId>com.live.online</groupId>
+                <artifactId>live-online-common-zookeeper</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.live.online</groupId>
+                <artifactId>live-online-user-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.live.online</groupId>
+                <artifactId>live-online-im-api</artifactId>
+                <version>${project.version}</version>
             </dependency>
 
         </dependencies>

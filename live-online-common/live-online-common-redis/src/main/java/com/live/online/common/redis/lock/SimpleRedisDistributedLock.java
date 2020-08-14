@@ -3,21 +3,19 @@ package com.live.online.common.redis.lock;
 import com.live.online.common.core.lock.core.AbstractDistributedLock;
 import com.live.online.common.core.lock.exception.DistributedLockException;
 import com.sun.istack.internal.NotNull;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
-import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 
 /**
+ * <pre/>
  * 基于 Redis 的分布式实现
  * @author 朱帅
  * @date 2020-08-13 11:19 下午
  */
-@Component
 @Scope("prototype")
 public class SimpleRedisDistributedLock extends AbstractDistributedLock {
 
@@ -25,8 +23,11 @@ public class SimpleRedisDistributedLock extends AbstractDistributedLock {
 
     private final StringRedisSerializer serializer = new StringRedisSerializer();
 
-    @Autowired
-    protected RedisTemplate<String, Object> redisTemplate;
+    private final RedisTemplate<String, Object> redisTemplate;
+
+    public SimpleRedisDistributedLock(RedisTemplate<String, Object> redisTemplate) {
+        this.redisTemplate = redisTemplate;
+    }
 
     @Override
     public boolean tryLock(@NotNull String lockKey) throws DistributedLockException {

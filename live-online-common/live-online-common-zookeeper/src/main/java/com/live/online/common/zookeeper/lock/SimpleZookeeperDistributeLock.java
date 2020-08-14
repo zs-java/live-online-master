@@ -1,4 +1,4 @@
-package com.live.online.common.zookeeper.conf.lock;
+package com.live.online.common.zookeeper.lock;
 
 import com.live.online.common.core.lock.core.AbstractDistributedLock;
 import com.live.online.common.core.lock.exception.DistributedLockException;
@@ -6,16 +6,15 @@ import com.live.online.common.zookeeper.conf.ZookeeperConfiguration;
 import org.I0Itec.zkclient.IZkDataListener;
 import org.I0Itec.zkclient.ZkClient;
 import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 import java.util.concurrent.CountDownLatch;
 
 /**
+ * <pre/>
  * 基于 Zookeeper 的分布式锁实现
  * @author 朱帅
  * @date 2020-08-14 12:25 上午
  */
-@Component
 @Scope("prototype")
 public class SimpleZookeeperDistributeLock extends AbstractDistributedLock {
 

@@ -4,6 +4,7 @@ import com.live.online.common.core.lock.core.DistributedLock;
 import org.apache.commons.lang3.StringUtils;
 
 /**
+ * <pre/>
  * 分布式锁异常，运行时异常
  * @author 朱帅
  * @date 2020-08-12 10:31 下午

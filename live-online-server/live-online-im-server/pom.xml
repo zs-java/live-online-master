@@ -17,4 +17,17 @@
         <module>live-online-im-service</module>
     </modules>
 
+    <dependencies>
+        <!-- Live Online Common Redis -->
+        <dependency>
+            <groupId>com.live.online</groupId>
+            <artifactId>live-online-common-redis</artifactId>
+        </dependency>
+        <!-- Live Online Common Zookeeper -->
+        <dependency>
+            <groupId>com.live.online</groupId>
+            <artifactId>live-online-common-zookeeper</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>
