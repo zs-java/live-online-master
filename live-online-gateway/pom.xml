@@ -44,6 +44,12 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
+        <!-- Kinfe4j Swagger -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+        </dependency>
+
         <!-- Live Online Common Core -->
         <dependency>
             <groupId>com.live.online</groupId>

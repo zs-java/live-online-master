@@ -12,6 +12,10 @@ spring:
         file-extension: yaml
         server-addr: ${app.nacos.ip}:${app.nacos.port}
         namespace: ${app.nacos.namespace}
+    gateway:
+      discovery:
+        locator:
+          lowerCaseServiceId: true
   profiles:
     active: dev
 

@@ -28,6 +28,11 @@
         <spring.cloud.alibaba.nacos.version>1.3.0</spring.cloud.alibaba.nacos.version>
 
         <apache.curator.version>2.12.0</apache.curator.version>
+
+        <tec.zkclient.version>0.8</tec.zkclient.version>
+
+        <knife4j.version>2.0.1</knife4j.version>
+
     </properties>
 
     <dependencyManagement>
@@ -78,7 +83,7 @@
             <dependency>
                 <groupId>com.101tec</groupId>
                 <artifactId>zkclient</artifactId>
-                <version>0.8</version>
+                <version>${tec.zkclient.version}</version>
             </dependency>
 
             <dependency>
@@ -101,6 +106,18 @@
                 <artifactId>live-online-im-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <!-- Knife4j Swagger -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
