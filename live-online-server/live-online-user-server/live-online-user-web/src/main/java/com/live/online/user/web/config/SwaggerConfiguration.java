@@ -28,8 +28,6 @@ import java.util.List;
  * 描 述: User Web Swagger 配置类
  * 作 者: 张屹峰
  * 创 建：2020年08月14日
- * <p>
- * 历 史: (版本) 作者 时间 注释
  */
 @Configuration
 @EnableSwagger2
@@ -69,7 +67,6 @@ public class SwaggerConfiguration {
     /**
      * 描 述： Swagger Api 信息
      * 作 者： 张屹峰
-     * 历 史： (版本) 作者 时间 注释
      * @return 响应消息集合
      */
     private ApiInfo groupApiInfo(){
@@ -86,7 +83,6 @@ public class SwaggerConfiguration {
     /**
      * 描 述： 默认api文档范围
      * 作 者： 张屹峰
-     * 历 史： (版本) 作者 时间 注释
      * @return 响应消息集合
      */
     private Predicate<RequestHandler> defaultApiSelector(){
@@ -101,7 +97,6 @@ public class SwaggerConfiguration {
     /**
      * 描 述： 获取默认响应消息
      * 作 者： 张屹峰
-     * 历 史： (版本) 作者 时间 注释
      * @return 响应消息集合
      */
     private List<ResponseMessage> getDefaultResponseMessages() {

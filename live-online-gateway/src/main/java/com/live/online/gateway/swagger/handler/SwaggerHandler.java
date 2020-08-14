@@ -15,23 +15,21 @@ import java.util.Optional;
  * 描 述: Swagger Handler
  * 作 者: 张屹峰
  * 创 建：2020年08月14日
- * <p>
- * 历 史: (版本) 作者 时间 注释
  */
 @RestController
 public class SwaggerHandler  {
 
-    private final SecurityConfiguration securityConfiguration;
+    @Autowired(required = false)
+    private SecurityConfiguration securityConfiguration;
 
-    private final UiConfiguration uiConfiguration;
+    @Autowired(required = false)
+    private UiConfiguration uiConfiguration;
 
     private final SwaggerResourcesProvider swaggerResources;
 
     @Autowired
-    public SwaggerHandler(SwaggerResourcesProvider swaggerResources, SecurityConfiguration securityConfiguration, UiConfiguration uiConfiguration) {
+    public SwaggerHandler(SwaggerResourcesProvider swaggerResources) {
         this.swaggerResources = swaggerResources;
-        this.securityConfiguration = securityConfiguration;
-        this.uiConfiguration = uiConfiguration;
     }
 
     @GetMapping("/swagger-resources/configuration/security")

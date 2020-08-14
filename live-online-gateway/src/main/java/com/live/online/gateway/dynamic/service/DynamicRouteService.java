@@ -19,8 +19,6 @@ import java.util.List;
  * 描 述: 动态路由 基础基础方法类
  * 作 者: 朱帅
  * 创 建：2020年08月14日
- * <p>
- * 历 史: (版本) 作者 时间 注释
  */
 @Service
 @Slf4j
@@ -39,7 +37,6 @@ public class DynamicRouteService implements ApplicationEventPublisherAware {
     /**
      * 描 述： 更新路由
      * 作 者： 朱帅
-     * 历 史： (版本) 作者 时间 注释
      * @param definition 路由对象
      * @return boolean
      */
@@ -67,7 +64,6 @@ public class DynamicRouteService implements ApplicationEventPublisherAware {
     /**
      * 描 述： 根据路由Id删除已经注册的路由
      * 作 者： 朱帅
-     * 历 史： (版本) 作者 时间 注释
      * @param id 路由Id
      * @return boolean
      */
@@ -87,7 +83,6 @@ public class DynamicRouteService implements ApplicationEventPublisherAware {
     /**
      * 描 述： 根据路由Id删除集合中的路由
      * 作 者： 张屹峰
-     * 历 史： (版本) 作者 时间 注释
      */
     public void deleteFromRouteDefinitionList(String id) {
         try {

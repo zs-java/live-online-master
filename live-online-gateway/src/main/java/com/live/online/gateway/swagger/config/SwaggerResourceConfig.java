@@ -19,8 +19,6 @@ import java.util.List;
  * 描 述: Swagger资源配置类 用来统一管理每个服务的Swagger Api
  * 作 者: 张屹峰
  * 创 建：2020年08月14日
- * <p>
- * 历 史: (版本) 作者 时间 注释
  */
 @Component
 @Primary
@@ -59,7 +57,6 @@ public class SwaggerResourceConfig implements SwaggerResourcesProvider {
     /**
      * 描 述： 从路由中找出所有服务并获取 Swagger Api 资源
      * 作 者： 张屹峰
-     * 历 史： (版本) 作者 时间 注释
      * @return Swagger资源集合
      */
     @Override
@@ -83,7 +80,6 @@ public class SwaggerResourceConfig implements SwaggerResourcesProvider {
     /**
      * 描 述： 组装 Swagger 资源对象
      * 作 者： 张屹峰
-     * 历 史： (版本) 作者 时间 注释
      * @param name route id
      * @param location router swagger url
      * @return Swagger 资源对象

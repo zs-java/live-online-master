@@ -12,8 +12,6 @@ import org.springframework.web.server.ServerWebExchange;
  * 描 述: Swagger Header 过滤器
  * 作 者: 张屹峰
  * 创 建：2020年08月14日
- * <p>
- * 历 史: (版本) 作者 时间 注释
  */
 @Component
 public class SwaggerHeaderFilter extends AbstractGatewayFilterFactory<Object> {
