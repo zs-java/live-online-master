@@ -21,6 +21,8 @@ import java.lang.annotation.*;
 @Import(DistributedConfiguration.class)
 public @interface EnableDistributedLock {
 
+    String EMPTY = "";
+
     @AliasFor("type")
     DistributedLockType value() default DistributedLockType.REDIS;
 
@@ -35,7 +37,13 @@ public @interface EnableDistributedLock {
      * 分布式锁实现类全路径（优先级高于 type）
      * @return class reference
      */
-    String implClass() default "";
+    String implClass() default EMPTY;
+
+    /**
+     * AOP 增强包路径，EMPTY 则不开启 AOP 增强
+     * @return package
+     */
+    String basePackage() default EMPTY;
 
 
 

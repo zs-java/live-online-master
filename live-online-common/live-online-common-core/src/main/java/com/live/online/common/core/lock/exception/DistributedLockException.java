@@ -29,6 +29,12 @@ public class DistributedLockException extends RuntimeException {
         this.lockClass = lockClass;
     }
 
+    public DistributedLockException(String message, Throwable causeThrowable) {
+        super(message);
+        this.message = message;
+        this.causeThrowable = causeThrowable;
+    }
+
     public DistributedLockException(String message, Class<? extends DistributedLock> lockClass, Throwable throwable) {
         super(throwable);
         this.message = message;

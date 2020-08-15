@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableDiscoveryClient
 @ComponentScan("com.live.online")
-@EnableDistributedLock
+@EnableDistributedLock(basePackage = "com.live.online.im.service.impl")
 public class ImServiceApp {
 
     public static void main(String[] args) {
