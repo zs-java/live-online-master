@@ -17,7 +17,7 @@ public enum DistributedLockType {
     /**
      * Zookeeper 分布式锁实现类
      */
-    ZOOKEEPER("com.live.online.common.zookeeper.conf.lock.SimpleZookeeperDistributeLock")
+    ZOOKEEPER("com.live.online.common.zookeeper.lock.SimpleZookeeperDistributeLock")
     ;
 
     private final String className;

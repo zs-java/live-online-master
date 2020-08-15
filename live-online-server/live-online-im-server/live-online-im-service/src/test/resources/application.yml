@@ -10,3 +10,6 @@ spring:
         max-idle: 8
         min-idle: 0
     timeout: 10000
+
+zk:
+  url: xzcoder.com:22181

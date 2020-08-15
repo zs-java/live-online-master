@@ -77,4 +77,9 @@ public class DistributedLockTest {
         countDownLatch.await();
     }
 
+    @Test
+    public void simpleTest() throws InterruptedException {
+        imApiService.lockedMethod(new CountDownLatch(1));
+    }
+
 }

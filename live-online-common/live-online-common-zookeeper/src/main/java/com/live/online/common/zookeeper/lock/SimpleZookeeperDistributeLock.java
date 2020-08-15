@@ -18,6 +18,8 @@ import java.util.concurrent.CountDownLatch;
 @Scope("prototype")
 public class SimpleZookeeperDistributeLock extends AbstractDistributedLock {
 
+    private static final String BASE_PATH = "/";
+
     private CountDownLatch countDownLatch = null;
 
     private final ZkClient zkClient;
@@ -29,8 +31,9 @@ public class SimpleZookeeperDistributeLock extends AbstractDistributedLock {
     @Override
     public boolean tryLock(String lockKey) throws DistributedLockException {
         try {
+            String path = BASE_PATH + lockKey;
             // 创建path路径，path不存在则能创建成功，即拿到锁
-            zkClient.createEphemeral(lockKey);
+            zkClient.createEphemeral(path);
             return true;
         } catch (Exception e) {
             // path节点已经存在，捕获异常，即没有拿到锁
@@ -40,6 +43,7 @@ public class SimpleZookeeperDistributeLock extends AbstractDistributedLock {
 
     @Override
     public void waitLock(String lockKey) throws DistributedLockException {
+        String path = BASE_PATH + lockKey;
         IZkDataListener iZkDataListener = new IZkDataListener() {
             @Override
             public void handleDataDeleted(String s) {
@@ -54,9 +58,9 @@ public class SimpleZookeeperDistributeLock extends AbstractDistributedLock {
             }
         };
         // zk 注册 DataChange 事件，监听 path 路径改变
-        zkClient.subscribeDataChanges(lockKey, iZkDataListener);
+        zkClient.subscribeDataChanges(path, iZkDataListener);
 
-        if(zkClient.exists(lockKey)) {
+        if(zkClient.exists(path)) {
             // path路径已经存在，说明已经有线程获取锁
             countDownLatch = new CountDownLatch(1);
             try {
@@ -68,7 +72,7 @@ public class SimpleZookeeperDistributeLock extends AbstractDistributedLock {
         }
 
         // 删除监听
-        zkClient.unsubscribeDataChanges(lockKey, iZkDataListener);
+        zkClient.unsubscribeDataChanges(path, iZkDataListener);
     }
 
     @Override
