@@ -7,14 +7,14 @@
     <groupId>com.live.online</groupId>
     <artifactId>live-online-master</artifactId>
     <version>1.0.0</version>
+    <packaging>pom</packaging>
+
     <modules>
         <module>live-online-common</module>
-        <module>live-online-eureka-server</module>
         <module>live-online-gateway</module>
         <module>live-online-job</module>
         <module>live-online-server</module>
     </modules>
-    <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
