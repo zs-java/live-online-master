@@ -4,8 +4,8 @@
 ROOT Project live-online-master 项目结构
 +--- live-online-common
     \+--- live-online-common-core
-    \+--- live-online-common-doc
-+--- live-online-eureka-server
+    \+--- live-online-common-redis
+    \+--- live-online-common-zookeeper
 +--- live-online-gateway
 +--- live-online-job
 +--- live-online-server
