@@ -1,6 +1,9 @@
 package com.live.online.common.core.lock.core;
 
+import com.live.online.common.core.lock.exception.DistributedLockException;
 import org.springframework.context.ApplicationContext;
+
+import java.util.Objects;
 
 /**
  * <pre/>
@@ -29,7 +32,11 @@ public class LockUtils {
      * @return {@link DistributedLock}
      */
     public static DistributedLock newDistributedLock() {
-        return applicationContext.getBean(DistributedLock.class);
+        try {
+            return applicationContext.getBean(DistributedLock.class);
+        } catch (Exception e) {
+            throw new DistributedLockException("DistributedLock 示例创建失败，请检查是否开始 @EnableDistributedLock 并指定正确的锁实现", DistributedLock.class, e);
+        }
     }
 
     /**
@@ -46,9 +53,7 @@ public class LockUtils {
      * @param lock lock id
      */
     public static void unlock(DistributedLock lock) {
-        if (null != lock) {
-            lock.unlock();
-        }
+        Objects.requireNonNull(lock).unlock();
     }
 
 }
