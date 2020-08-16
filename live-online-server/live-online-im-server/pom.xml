@@ -28,6 +28,19 @@
             <groupId>com.live.online</groupId>
             <artifactId>live-online-common-zookeeper</artifactId>
         </dependency>
+
+        <!-- Live Online OSS API -->
+        <dependency>
+            <groupId>com.live.online</groupId>
+            <artifactId>live-online-oss-sdk-api</artifactId>
+        </dependency>
+
+        <!-- Live Online OSS Qiniu SDK -->
+        <dependency>
+            <groupId>com.live.online</groupId>
+            <artifactId>live-online-oss-qiniu-sdk</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>

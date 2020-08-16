@@ -14,6 +14,7 @@
         <module>live-online-gateway</module>
         <module>live-online-job</module>
         <module>live-online-server</module>
+        <module>live-online-sdk</module>
     </modules>
 
     <properties>
@@ -151,6 +152,20 @@
                 <groupId>com.live.online</groupId>
                 <artifactId>live-online-im-api</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+
+            <!-- Live Online OSS API-->
+            <dependency>
+                <groupId>com.live.online</groupId>
+                <artifactId>live-online-oss-sdk-api</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <!-- Live Online OSS Qiniu SDK -->
+            <dependency>
+                <groupId>com.live.online</groupId>
+                <artifactId>live-online-oss-qiniu-sdk</artifactId>
+                <version>1.0.0</version>
             </dependency>
 
         </dependencies>

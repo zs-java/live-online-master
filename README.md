@@ -8,6 +8,14 @@ ROOT Project live-online-master 项目结构
     \+--- live-online-common-zookeeper
 +--- live-online-gateway
 +--- live-online-job
++--- live-online-sdk
+    \+--- live-online-live-sdk
+        \+--- live-online-live-sdk-api
+        \+--- live-online-live-liveqing-sdk
+        \+--- live-online-live-tencent-sdk
+    \+--- live-online-oss-sdk
+        \+--- live-online-oss-sdk-api
+        \+--- live-online-oss-qiniu-sdk
 +--- live-online-server
     \+--- live-online-user-server
         \+--- live-online-user-api
