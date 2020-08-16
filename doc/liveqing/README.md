@@ -21,5 +21,10 @@ docker start liveqing
 docker stop liveqing
 ```
 
+### 4. 访问 WEB 页面
+> http://127.0.0.1:10080/   
+> 用户名：admin   
+> 密码：admin   
+
 ---
 > @Author: zhushuai_it@163.com
