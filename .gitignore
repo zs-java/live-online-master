@@ -1,0 +1,47 @@
+### Maven ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.DS_Store
+**/application.pid
+predict_data/
+
+### frontend builds ###
+**/install/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+bin/
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### Visual Studio Code ###
+.vscode/
+
+### NPM / Yarnpkg ###
+node_modules/
+
+### Gradle ###
+**/lombok.config
+**/.gradle/
+
+**/*.log
+**/*.code-workspace
