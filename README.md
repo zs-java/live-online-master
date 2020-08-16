@@ -27,6 +27,9 @@ ROOT Project live-online-master 项目结构
         \+--- live-online-im-web  
 ```
 
+# 环境搭建
+#### LiveQing 流媒体服务器[参考](doc/liveqing/README.md)
+
 # 开发规范
 
 ### 类名注释
